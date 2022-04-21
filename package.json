@@ -1,0 +1,48 @@
+{
+  "name": "@oclif/example-single-js",
+  "description": "example single-command CLI built with dxcli",
+  "version": "1.10.6",
+  "author": "Jeff Dickey @jdxcode",
+  "bin": {
+    "example-single-js": "./bin/run"
+  },
+  "bugs": "https://github.com/oclif/example-single-js/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "node-fetch": "^3.2.3"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "chai": "^4",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "mocha": "^5",
+    "nyc": "^14"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/oclif/example-single-js",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "example-single-js"
+  },
+  "repository": "oclif/example-single-js",
+  "scripts": {
+    "posttest": "eslint .",
+    "prepack": "oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
